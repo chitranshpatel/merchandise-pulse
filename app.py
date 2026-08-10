@@ -308,16 +308,16 @@ if page == "AI Insight Brief":
     with setup_col:
         st.markdown('<div class="section-kicker">Brief settings</div><div class="section-title">Generation controls</div>', unsafe_allow_html=True)
         audience = st.selectbox("Audience", ["Merchandise leadership", "Supplier manager", "Trade planning team"])
-        model = st.text_input("OpenRouter model", value="openai/gpt-4o-mini", help="Enter any OpenRouter model slug that supports structured outputs.")
-        entered_key = st.text_input(
-            "OpenRouter API key", value="", type="password",
-            placeholder="Using configured key" if configured_key else "sk-or-v1-…",
-            help="Used for this request only. Do not commit API keys to Git.",
+        model = st.selectbox(
+            "AI model",
+            ["openai/gpt-4o-mini", "google/gemini-2.5-flash", "anthropic/claude-sonnet-4.5"],
+            help="Models are accessed through the OpenRouter connection configured by the app owner.",
         )
-        live_key = entered_key.strip() or configured_key
-        generate = st.button("Generate live brief", type="primary", width="stretch", disabled=not bool(live_key))
-        if not live_key:
-            st.caption("Add a key here, set OPENROUTER_API_KEY, or create .streamlit/secrets.toml. Template mode is active.")
+        generate = st.button(
+            "Generate live brief", type="primary", width="stretch", disabled=not bool(configured_key)
+        )
+        if not configured_key:
+            st.caption("Live AI is not configured for this deployment. Template mode is active.")
     with evidence_col:
         st.markdown('<div class="section-kicker">Model context</div><div class="section-title">Evidence supplied to the brief</div>', unsafe_allow_html=True)
         evidence_frame = pd.DataFrame(evidence)[["id", "metric", "display", "period"]].rename(
@@ -331,9 +331,9 @@ if page == "AI Insight Brief":
         with st.spinner("Preparing the evidence-grounded brief…"):
             try:
                 brief = generate_openrouter_brief(
-                    evidence, api_key=live_key, model=model.strip(), audience=audience
+                    evidence, api_key=configured_key, model=model, audience=audience
                 )
-                mode = f"OpenRouter · {model.strip()}"
+                mode = f"OpenRouter · {model}"
                 st.session_state["ai_brief"] = (brief, mode, evidence)
             except RuntimeError as exc:
                 st.warning(f"Live generation was unavailable, so the template brief is shown. {exc}")
