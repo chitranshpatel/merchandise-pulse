@@ -1,0 +1,25 @@
+store_id,store_name,channel,store_format,state,region,size_band,open_date,active_flag
+STR001,VIC Pharmacy 01,Pharmacy Retail,Small Format,VIC,VIC Region 1,Small,2024-02-05,True
+STR002,NSW Pharmacy 02,Pharmacy Retail,Medium Format,NSW,NSW Region 2,Medium,2024-01-29,True
+STR003,QLD Pharmacy 03,Pharmacy Retail,Large Format,QLD,QLD Region 1,Large,2024-01-22,True
+STR004,SA Pharmacy 04,Pharmacy Retail,Small Format,SA,SA Region 2,Small,2024-01-15,True
+STR005,WA Pharmacy 05,Pharmacy Retail,Medium Format,WA,WA Region 1,Medium,2024-01-08,True
+STR006,VIC Pharmacy 06,Pharmacy Retail,Large Format,VIC,VIC Region 2,Large,2024-01-01,True
+STR007,NSW Pharmacy 07,Pharmacy Retail,Small Format,NSW,NSW Region 1,Small,2023-12-25,True
+STR008,QLD Pharmacy 08,Pharmacy Retail,Medium Format,QLD,QLD Region 2,Medium,2023-12-18,True
+STR009,SA Pharmacy 09,Pharmacy Retail,Large Format,SA,SA Region 1,Large,2023-12-11,True
+STR010,WA Pharmacy 10,Pharmacy Retail,Small Format,WA,WA Region 2,Small,2023-12-04,True
+STR011,VIC Pharmacy 11,Pharmacy Retail,Medium Format,VIC,VIC Region 1,Medium,2023-11-27,True
+STR012,NSW Pharmacy 12,Pharmacy Retail,Large Format,NSW,NSW Region 2,Large,2023-11-20,True
+STR013,QLD Pharmacy 13,Pharmacy Retail,Small Format,QLD,QLD Region 1,Small,2023-11-13,True
+STR014,SA Pharmacy 14,Pharmacy Retail,Medium Format,SA,SA Region 2,Medium,2023-11-06,True
+STR015,WA Pharmacy 15,Pharmacy Retail,Large Format,WA,WA Region 1,Large,2023-10-30,True
+STR016,VIC Beauty 16,Beauty Retail,Small Format,VIC,VIC Region 2,Small,2023-10-23,True
+STR017,NSW Beauty 17,Beauty Retail,Medium Format,NSW,NSW Region 1,Medium,2023-10-16,True
+STR018,QLD Beauty 18,Beauty Retail,Large Format,QLD,QLD Region 2,Large,2023-10-09,True
+STR019,SA Beauty 19,Beauty Retail,Small Format,SA,SA Region 1,Small,2023-10-02,True
+STR020,WA Beauty 20,Beauty Retail,Medium Format,WA,WA Region 2,Medium,2023-09-25,True
+STR021,VIC Beauty 21,Beauty Retail,Large Format,VIC,VIC Region 1,Large,2023-09-18,True
+STR022,NSW Beauty 22,Beauty Retail,Small Format,NSW,NSW Region 2,Small,2023-09-11,True
+STR023,QLD Digital 23,Digital,Online Fulfilment,QLD,QLD Region 1,Medium,2023-09-04,True
+STR024,SA Digital 24,Digital,Online Fulfilment,SA,SA Region 2,Large,2023-08-28,True

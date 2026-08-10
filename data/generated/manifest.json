@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "first_week": "2025-02-10",
+  "last_week": "2026-08-03",
+  "row_counts": {
+    "dim_date": 546,
+    "dim_supplier": 12,
+    "dim_product": 96,
+    "dim_store": 24,
+    "dim_promotion": 42,
+    "bridge_promotion_products": 189,
+    "fact_sales_weekly": 103447,
+    "fact_inventory_weekly": 103447,
+    "fact_forecast_weekly": 103447,
+    "fact_purchase_order_lines": 2759
+  }
+}

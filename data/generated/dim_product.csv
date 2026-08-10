@@ -1,0 +1,97 @@
+product_id,product_name,brand,category,subcategory,supplier_id,unit_cost,regular_unit_price,launch_date,private_label_flag,active_flag
+SKU0001,Calm Cleansers Therapy,Kindred Collective,Skincare,Cleansers,SUP006,19.17,29.30,2025-04-07,False,True
+SKU0002,Pure Eyes Ritual,Morrow Essentials,Cosmetics,Eyes,SUP012,9.50,15.13,2025-03-03,False,True
+SKU0003,Active General Health Care,Kindred Collective,Vitamins & Supplements,General Health,SUP006,20.08,44.15,2025-02-24,False,True
+SKU0004,Fresh Shampoo Boost,Morrow Essentials,Haircare,Shampoo,SUP012,17.97,27.53,2025-02-24,False,True
+SKU0005,Restore Oral Care Solution,Kindred Collective,Personal Care,Oral Care,SUP006,8.86,16.29,2025-02-10,False,True
+SKU0006,Essential Fitness Formula,Morrow Essentials,Wellness,Fitness,SUP012,17.25,34.83,2025-06-09,False,True
+SKU0007,Glow Pain Relief Complex,Kindred Collective,Pharmacy Essentials,Pain Relief,SUP006,13.78,24.75,2025-04-07,False,True
+SKU0008,Daily Serums Blend,Juniper Essentials,Skincare,Serums,SUP005,23.33,35.43,2025-03-17,False,True
+SKU0009,Calm Lips Therapy,Aster Collective,Cosmetics,Lips,SUP011,20.60,35.41,2025-03-10,True,True
+SKU0010,Pure Immunity Ritual,Juniper Essentials,Vitamins & Supplements,Immunity,SUP005,8.78,18.13,2025-03-03,False,True
+SKU0011,Active Treatment Care,Aster Collective,Haircare,Treatment,SUP011,5.77,9.05,2025-04-28,False,True
+SKU0012,Fresh Deodorant Boost,Juniper Essentials,Personal Care,Deodorant,SUP005,18.29,38.56,2025-05-19,False,True
+SKU0013,Restore Hydration Solution,Aster Collective,Wellness,Hydration,SUP011,16.64,38.15,2025-05-05,False,True
+SKU0014,Essential First Aid Formula,Juniper Essentials,Pharmacy Essentials,First Aid,SUP005,5.43,9.16,2025-04-28,False,True
+SKU0015,Glow Sun Care Complex,Everwell Collective,Skincare,Sun Care,SUP004,17.65,35.45,2025-02-17,False,True
+SKU0016,Daily Face Blend,Common Essentials,Cosmetics,Face,SUP010,19.70,40.85,2025-02-24,False,True
+SKU0017,Calm Sleep Therapy,Everwell Collective,Vitamins & Supplements,Sleep,SUP004,24.46,53.09,2025-05-05,False,True
+SKU0018,Pure Styling Ritual,Common Essentials,Haircare,Styling,SUP010,10.31,20.07,2025-04-28,True,True
+SKU0019,Active Body Care Care,Everwell Collective,Personal Care,Body Care,SUP004,7.49,12.95,2025-04-07,False,True
+SKU0020,Fresh Stress Support Boost,Common Essentials,Wellness,Stress Support,SUP010,20.69,41.15,2025-02-24,False,True
+SKU0021,Restore Allergy Solution,Everwell Collective,Pharmacy Essentials,Allergy,SUP004,18.42,29.68,2025-03-31,False,True
+SKU0022,Essential Cleansers Formula,Harbour Essentials,Skincare,Cleansers,SUP003,7.50,13.10,2025-06-09,False,True
+SKU0023,Glow Eyes Complex,Field Collective,Cosmetics,Eyes,SUP009,8.88,15.17,2025-02-17,False,True
+SKU0024,Daily General Health Blend,Harbour Essentials,Vitamins & Supplements,General Health,SUP003,9.11,13.96,2025-04-21,False,True
+SKU0025,Calm Shampoo Therapy,Field Collective,Haircare,Shampoo,SUP009,13.33,20.67,2025-06-16,False,True
+SKU0026,Pure Oral Care Ritual,Harbour Essentials,Personal Care,Oral Care,SUP003,24.97,42.49,2025-05-26,False,True
+SKU0027,Active Fitness Care,Field Collective,Wellness,Fitness,SUP009,13.19,29.33,2025-05-19,True,True
+SKU0028,Fresh Pain Relief Boost,Harbour Essentials,Pharmacy Essentials,Pain Relief,SUP003,7.00,11.15,2025-06-09,False,True
+SKU0029,Restore Serums Solution,Luma Collective,Skincare,Serums,SUP002,16.70,34.21,2025-05-12,False,True
+SKU0030,Essential Lips Formula,Brightside Essentials,Cosmetics,Lips,SUP008,25.50,44.88,2025-03-31,False,True
+SKU0031,Glow Immunity Complex,Luma Collective,Vitamins & Supplements,Immunity,SUP002,27.93,44.46,2025-05-26,False,True
+SKU0032,Daily Treatment Blend,Brightside Essentials,Haircare,Treatment,SUP008,5.73,8.83,2025-03-03,False,True
+SKU0033,Calm Deodorant Therapy,Luma Collective,Personal Care,Deodorant,SUP002,7.24,11.62,2025-05-12,False,True
+SKU0034,Pure Hydration Ritual,Brightside Essentials,Wellness,Hydration,SUP008,18.11,31.69,2025-05-19,False,True
+SKU0035,Active First Aid Care,Luma Collective,Pharmacy Essentials,First Aid,SUP002,16.46,37.70,2025-02-10,False,True
+SKU0036,Fresh Sun Care Boost,Northstar Essentials,Skincare,Sun Care,SUP001,20.17,31.83,2025-06-09,True,True
+SKU0037,Restore Face Solution,Solace Collective,Cosmetics,Face,SUP007,21.90,45.32,2025-04-21,False,True
+SKU0038,Essential Sleep Formula,Northstar Essentials,Vitamins & Supplements,Sleep,SUP001,6.23,11.12,2025-05-19,False,True
+SKU0039,Glow Styling Complex,Solace Collective,Haircare,Styling,SUP007,3.58,7.25,2025-04-07,False,True
+SKU0040,Daily Body Care Blend,Northstar Essentials,Personal Care,Body Care,SUP001,27.31,56.34,2025-06-02,False,True
+SKU0041,Calm Stress Support Therapy,Solace Collective,Wellness,Stress Support,SUP007,25.86,56.24,2025-04-14,False,True
+SKU0042,Pure Allergy Ritual,Northstar Essentials,Pharmacy Essentials,Allergy,SUP001,24.12,44.40,2025-03-24,False,True
+SKU0043,Active Cleansers Care,Morrow Collective,Skincare,Cleansers,SUP012,7.24,14.94,2025-06-09,False,True
+SKU0044,Fresh Eyes Boost,Kindred Essentials,Cosmetics,Eyes,SUP006,26.86,59.98,2025-02-10,False,True
+SKU0045,Restore General Health Solution,Morrow Collective,Vitamins & Supplements,General Health,SUP012,18.17,33.18,2025-03-03,True,True
+SKU0046,Essential Shampoo Formula,Kindred Essentials,Haircare,Shampoo,SUP006,26.26,57.35,2025-04-14,False,True
+SKU0047,Glow Oral Care Complex,Morrow Collective,Personal Care,Oral Care,SUP012,9.37,15.50,2025-06-16,False,True
+SKU0048,Daily Fitness Blend,Kindred Essentials,Wellness,Fitness,SUP006,26.70,41.70,2025-05-26,False,True
+SKU0049,Calm Pain Relief Therapy,Morrow Collective,Pharmacy Essentials,Pain Relief,SUP012,23.49,53.99,2025-06-09,False,True
+SKU0050,Pure Serums Ritual,Aster Essentials,Skincare,Serums,SUP011,22.26,35.31,2025-05-26,False,True
+SKU0051,Active Lips Care,Juniper Collective,Cosmetics,Lips,SUP005,26.70,42.92,2025-06-02,False,True
+SKU0052,Fresh Immunity Boost,Aster Essentials,Vitamins & Supplements,Immunity,SUP011,24.87,44.20,2025-03-24,False,True
+SKU0053,Restore Treatment Solution,Juniper Collective,Haircare,Treatment,SUP005,26.26,54.00,2025-03-24,False,True
+SKU0054,Essential Deodorant Formula,Aster Essentials,Personal Care,Deodorant,SUP011,20.97,36.90,2025-04-28,True,True
+SKU0055,Glow Hydration Complex,Juniper Collective,Wellness,Hydration,SUP005,14.23,26.31,2025-03-03,False,True
+SKU0056,Daily First Aid Blend,Aster Essentials,Pharmacy Essentials,First Aid,SUP011,9.57,14.83,2025-02-10,False,True
+SKU0057,Calm Sun Care Therapy,Common Collective,Skincare,Sun Care,SUP010,17.91,29.50,2025-03-31,False,True
+SKU0058,Pure Face Ritual,Everwell Essentials,Cosmetics,Face,SUP004,3.68,7.40,2025-02-17,False,True
+SKU0059,Active Sleep Care,Common Collective,Vitamins & Supplements,Sleep,SUP010,9.11,20.17,2025-04-21,False,True
+SKU0060,Fresh Styling Boost,Everwell Essentials,Haircare,Styling,SUP004,5.24,8.66,2025-05-26,False,True
+SKU0061,Restore Body Care Solution,Common Collective,Personal Care,Body Care,SUP010,8.75,13.90,2025-06-16,False,True
+SKU0062,Essential Stress Support Formula,Everwell Essentials,Wellness,Stress Support,SUP004,17.62,29.17,2025-05-26,False,True
+SKU0063,Glow Allergy Complex,Common Collective,Pharmacy Essentials,Allergy,SUP010,23.28,37.78,2025-03-03,True,True
+SKU0064,Daily Cleansers Blend,Field Essentials,Skincare,Cleansers,SUP009,19.65,33.97,2025-05-12,False,True
+SKU0065,Calm Eyes Therapy,Harbour Collective,Cosmetics,Eyes,SUP003,14.94,30.35,2025-03-03,False,True
+SKU0066,Pure General Health Ritual,Field Essentials,Vitamins & Supplements,General Health,SUP009,4.99,10.13,2025-03-03,False,True
+SKU0067,Active Shampoo Care,Harbour Collective,Haircare,Shampoo,SUP003,9.59,15.56,2025-05-19,False,True
+SKU0068,Fresh Oral Care Boost,Field Essentials,Personal Care,Oral Care,SUP009,6.93,11.22,2025-05-19,False,True
+SKU0069,Restore Fitness Solution,Harbour Collective,Wellness,Fitness,SUP003,9.62,21.49,2025-05-19,False,True
+SKU0070,Essential Pain Relief Formula,Field Essentials,Pharmacy Essentials,Pain Relief,SUP009,23.30,50.31,2025-03-03,False,True
+SKU0071,Glow Serums Complex,Brightside Collective,Skincare,Serums,SUP008,4.74,11.02,2025-02-10,False,True
+SKU0072,Daily Lips Blend,Luma Essentials,Cosmetics,Lips,SUP002,27.24,60.95,2025-03-31,True,True
+SKU0073,Calm Immunity Therapy,Brightside Collective,Vitamins & Supplements,Immunity,SUP008,7.57,13.81,2025-03-24,False,True
+SKU0074,Pure Treatment Ritual,Luma Essentials,Haircare,Treatment,SUP002,24.68,54.55,2025-03-17,False,True
+SKU0075,Active Deodorant Care,Brightside Collective,Personal Care,Deodorant,SUP008,12.78,29.49,2025-04-07,False,True
+SKU0076,Fresh Hydration Boost,Luma Essentials,Wellness,Hydration,SUP002,26.20,54.65,2025-04-14,False,True
+SKU0077,Restore First Aid Solution,Brightside Collective,Pharmacy Essentials,First Aid,SUP008,13.86,31.51,2025-06-09,False,True
+SKU0078,Essential Sun Care Formula,Solace Essentials,Skincare,Sun Care,SUP007,19.72,35.98,2025-03-24,False,True
+SKU0079,Glow Face Complex,Northstar Collective,Cosmetics,Face,SUP001,10.77,24.63,2025-06-16,False,True
+SKU0080,Daily Sleep Blend,Solace Essentials,Vitamins & Supplements,Sleep,SUP007,21.53,33.33,2025-04-21,False,True
+SKU0081,Calm Styling Therapy,Northstar Collective,Haircare,Styling,SUP001,4.90,9.32,2025-06-02,True,True
+SKU0082,Pure Body Care Ritual,Solace Essentials,Personal Care,Body Care,SUP007,26.02,48.38,2025-02-17,False,True
+SKU0083,Active Stress Support Care,Northstar Collective,Wellness,Stress Support,SUP001,27.04,42.15,2025-03-17,False,True
+SKU0084,Fresh Allergy Boost,Solace Essentials,Pharmacy Essentials,Allergy,SUP007,5.18,8.04,2025-03-31,False,True
+SKU0085,Restore Cleansers Solution,Kindred Collective,Skincare,Cleansers,SUP006,13.39,30.20,2025-06-16,False,True
+SKU0086,Essential Eyes Formula,Morrow Essentials,Cosmetics,Eyes,SUP012,9.53,18.21,2025-02-24,False,True
+SKU0087,Glow General Health Complex,Kindred Collective,Vitamins & Supplements,General Health,SUP006,13.77,26.19,2025-06-02,False,True
+SKU0088,Daily Shampoo Blend,Morrow Essentials,Haircare,Shampoo,SUP012,11.25,18.75,2025-04-21,False,True
+SKU0089,Calm Oral Care Therapy,Kindred Collective,Personal Care,Oral Care,SUP006,9.35,16.43,2025-04-14,False,True
+SKU0090,Pure Fitness Ritual,Morrow Essentials,Wellness,Fitness,SUP012,14.70,32.94,2025-02-24,True,True
+SKU0091,Active Pain Relief Care,Kindred Collective,Pharmacy Essentials,Pain Relief,SUP006,3.73,7.21,2025-06-16,False,True
+SKU0092,Fresh Serums Boost,Juniper Essentials,Skincare,Serums,SUP005,27.90,43.38,2025-03-24,False,True
+SKU0093,Restore Lips Solution,Aster Collective,Cosmetics,Lips,SUP011,15.89,25.24,2025-04-28,False,True
+SKU0094,Essential Immunity Formula,Juniper Essentials,Vitamins & Supplements,Immunity,SUP005,25.08,54.79,2025-04-28,False,True
+SKU0095,Glow Treatment Complex,Aster Collective,Haircare,Treatment,SUP011,10.48,18.74,2025-06-09,False,True
+SKU0096,Daily Deodorant Blend,Juniper Essentials,Personal Care,Deodorant,SUP005,20.74,39.94,2025-06-02,False,True

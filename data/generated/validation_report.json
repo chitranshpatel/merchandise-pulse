@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "dim_supplier: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "dim_product: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "dim_store: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "dim_promotion: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "bridge_promotion_products: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "fact_sales_weekly: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "fact_inventory_weekly: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "fact_forecast_weekly: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "fact_purchase_order_lines: unique grain",
+      "passed": true,
+      "detail": "0 duplicate keys"
+    },
+    {
+      "check": "sales foreign keys",
+      "passed": true,
+      "detail": "0 invalid mappings"
+    },
+    {
+      "check": "sales arithmetic",
+      "passed": true,
+      "detail": "0 rows failed"
+    },
+    {
+      "check": "inventory in-stock days",
+      "passed": true,
+      "detail": "0 invalid rows"
+    },
+    {
+      "check": "purchase-order foreign keys",
+      "passed": true,
+      "detail": "0 invalid mappings"
+    },
+    {
+      "check": "promotion funding reconciliation",
+      "passed": true,
+      "detail": "0 campaigns failed"
+    },
+    {
+      "check": "scenario: late supplier decline",
+      "passed": true,
+      "detail": "SUP001 recent 36.8%, prior 88.0%"
+    },
+    {
+      "check": "scenario: category forecast bias",
+      "passed": true,
+      "detail": "Cosmetics 18.1%, Vitamins -16.1%"
+    },
+    {
+      "check": "dataset size",
+      "passed": true,
+      "detail": "103,447 weekly sales rows"
+    }
+  ],
+  "row_counts": {
+    "dim_date": 546,
+    "dim_supplier": 12,
+    "dim_product": 96,
+    "dim_store": 24,
+    "dim_promotion": 42,
+    "bridge_promotion_products": 189,
+    "fact_sales_weekly": 103447,
+    "fact_inventory_weekly": 103447,
+    "fact_forecast_weekly": 103447,
+    "fact_purchase_order_lines": 2759
+  },
+  "scenario_metrics": {
+    "supplier_1_recent_otif": 0.3684,
+    "supplier_1_prior_otif": 0.8797,
+    "cosmetics_bias": 0.1805,
+    "vitamins_bias": -0.1606
+  }
+}

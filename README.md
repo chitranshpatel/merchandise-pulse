@@ -49,8 +49,10 @@ steps.
 python3 scripts/generate_data.py
 ```
 
-Generated files are written to `data/generated/`. They are ignored by Git
-because they can be reproduced from the fixed seed in the script.
+Generated files are written to `data/generated/` and included with the project
+so a hosted dashboard can start immediately. They can still be reproduced from
+the fixed seed in the script. The Streamlit app also recreates them
+automatically if a deployment starts without local data.
 
 ## Local setup
 

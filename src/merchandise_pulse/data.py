@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import subprocess
+import sys
 
 import pandas as pd
 
@@ -32,14 +34,37 @@ DATE_COLUMNS = {
 }
 
 
+def generate_tables(data_dir: Path) -> None:
+    """Build the reproducible demo dataset when a deployment starts empty."""
+    project_root = Path(__file__).resolve().parents[2]
+    generator = project_root / "scripts" / "generate_data.py"
+    if not generator.exists():
+        raise FileNotFoundError(f"Synthetic data generator not found at {generator}")
+
+    data_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        subprocess.run(
+            [sys.executable, str(generator), "--output", str(data_dir.resolve())],
+            cwd=project_root,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+        detail = getattr(exc, "stderr", "") or getattr(exc, "stdout", "") or str(exc)
+        raise RuntimeError(f"Could not generate the demonstration dataset: {detail[-500:]}") from exc
+
+
 def load_tables(data_dir: str | Path = "data/generated") -> dict[str, pd.DataFrame]:
     data_dir = Path(data_dir)
     missing = [name for name in TABLES if not (data_dir / f"{name}.csv").exists()]
     if missing:
-        names = ", ".join(missing)
-        raise FileNotFoundError(
-            f"Missing generated tables: {names}. Run python scripts/generate_data.py first."
-        )
+        generate_tables(data_dir)
+        missing = [name for name in TABLES if not (data_dir / f"{name}.csv").exists()]
+        if missing:
+            names = ", ".join(missing)
+            raise FileNotFoundError(f"Missing generated tables after generation: {names}")
 
     tables = {}
     for name in TABLES:

@@ -3,6 +3,7 @@ from datetime import timedelta
 import pandas as pd
 import pytest
 
+from merchandise_pulse.data import TABLES, load_tables
 from merchandise_pulse.metrics.commercial import commercial_summary, sales_growth
 from merchandise_pulse.metrics.forecast import forecast_detail, forecast_summary
 from merchandise_pulse.metrics.inventory import inventory_summary
@@ -209,3 +210,9 @@ def test_template_insight_is_traceable_to_supplied_evidence():
     exported = brief_as_markdown(brief, evidence, mode="Template fallback")
     assert "Supplier One OTIF" in exported
     assert "synthetic portfolio data" in exported
+
+
+def test_missing_deployment_data_is_generated_automatically(tmp_path):
+    tables = load_tables(tmp_path / "generated")
+    assert set(tables) == set(TABLES)
+    assert all(not frame.empty for frame in tables.values())

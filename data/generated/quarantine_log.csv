@@ -1,0 +1,8 @@
+issue_id,source_table,record_key,rule,detected_date,status
+DQ001,sales_staging,STR004|SKU0021|2026-07-20,Duplicate business key,2026-08-04,Quarantined
+DQ002,sales_staging,STR011|SKU0044|2026-07-27,Duplicate business key,2026-08-04,Quarantined
+DQ003,product_staging,SKU0097,Missing supplier mapping,2026-08-04,Quarantined
+DQ004,inventory_staging,STR008|SKU0032|2026-08-03,Negative closing stock,2026-08-04,Quarantined
+DQ005,purchase_order_staging,POL009812,Receipt date before order date,2026-08-04,Quarantined
+DQ006,promotion_staging,PRM043,End date before start date,2026-08-04,Quarantined
+DQ007,forecast_staging,STR019|SKU0014|2026-08-03,Missing forecast units,2026-08-04,Quarantined

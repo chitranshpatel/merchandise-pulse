@@ -1,0 +1,43 @@
+promotion_id,promotion_name,promotion_type,start_date,end_date,channel,supplier_funding_total,status
+PRM001,Campaign 01,Multibuy,2025-06-09,2025-06-15,Beauty Retail,628.53,Complete
+PRM002,Campaign 02,Catalogue,2025-07-28,2025-08-03,Digital,508.21,Complete
+PRM003,Campaign 03,Launch,2025-09-15,2025-09-28,Pharmacy Retail,940.98,Complete
+PRM004,Campaign 04,Percentage,2025-11-03,2025-11-09,Beauty Retail,686.48,Complete
+PRM005,Campaign 05,Multibuy,2025-12-22,2025-12-28,Digital,1008.95,Complete
+PRM006,Campaign 06,Catalogue,2026-02-09,2026-02-22,Pharmacy Retail,1013.90,Complete
+PRM007,Campaign 07,Launch,2026-03-30,2026-04-05,Beauty Retail,852.42,Complete
+PRM008,Campaign 08,Percentage,2026-05-18,2026-05-24,Digital,729.77,Complete
+PRM009,Campaign 09,Multibuy,2026-07-06,2026-07-19,Pharmacy Retail,1089.31,Complete
+PRM010,Campaign 10,Catalogue,2025-06-02,2025-06-08,Beauty Retail,924.95,Complete
+PRM011,Campaign 11,Launch,2025-07-21,2025-07-27,Digital,1156.34,Complete
+PRM012,Campaign 12,Percentage,2025-09-08,2025-09-21,Pharmacy Retail,1177.04,Complete
+PRM013,Campaign 13,Multibuy,2025-10-27,2025-11-02,Beauty Retail,1129.21,Complete
+PRM014,Campaign 14,Catalogue,2025-12-15,2025-12-21,Digital,1361.21,Complete
+PRM015,Campaign 15,Launch,2026-02-02,2026-02-15,Pharmacy Retail,1210.39,Complete
+PRM016,Campaign 16,Percentage,2026-03-23,2026-03-29,Beauty Retail,1106.20,Complete
+PRM017,Campaign 17,Multibuy,2026-05-11,2026-05-17,Digital,1220.49,Complete
+PRM018,Campaign 18,Catalogue,2026-06-29,2026-07-12,Pharmacy Retail,1226.90,Complete
+PRM019,Campaign 19,Launch,2025-05-26,2025-06-01,Beauty Retail,1593.71,Complete
+PRM020,Campaign 20,Percentage,2025-07-14,2025-07-20,Digital,1324.46,Complete
+PRM021,Campaign 21,Multibuy,2025-09-01,2025-09-14,Pharmacy Retail,1662.93,Complete
+PRM022,Campaign 22,Catalogue,2025-10-20,2025-10-26,Beauty Retail,1330.50,Complete
+PRM023,Campaign 23,Launch,2025-12-08,2025-12-14,Digital,1353.60,Complete
+PRM024,Campaign 24,Percentage,2026-01-26,2026-02-08,Pharmacy Retail,1494.53,Complete
+PRM025,Campaign 25,Multibuy,2026-03-16,2026-03-22,Beauty Retail,1643.61,Complete
+PRM026,Campaign 26,Catalogue,2026-05-04,2026-05-10,Digital,1825.02,Complete
+PRM027,Campaign 27,Launch,2026-06-22,2026-07-05,Pharmacy Retail,1623.78,Complete
+PRM028,Campaign 28,Percentage,2025-05-19,2025-05-25,Beauty Retail,1839.80,Complete
+PRM029,Campaign 29,Multibuy,2025-07-07,2025-07-13,Digital,1828.58,Complete
+PRM030,Campaign 30,Catalogue,2025-08-25,2025-09-07,Pharmacy Retail,1884.04,Complete
+PRM031,Campaign 31,Launch,2025-10-13,2025-10-19,Beauty Retail,1862.15,Complete
+PRM032,Campaign 32,Percentage,2025-12-01,2025-12-07,Digital,1629.99,Complete
+PRM033,Campaign 33,Multibuy,2026-01-19,2026-02-01,Pharmacy Retail,1837.58,Complete
+PRM034,Campaign 34,Catalogue,2026-03-09,2026-03-15,Beauty Retail,2099.71,Complete
+PRM035,Campaign 35,Launch,2026-04-27,2026-05-03,Digital,1763.62,Complete
+PRM036,Campaign 36,Percentage,2026-06-15,2026-06-28,Pharmacy Retail,1971.84,Complete
+PRM037,Campaign 37,Multibuy,2025-05-12,2025-05-18,Beauty Retail,1782.03,Complete
+PRM038,Campaign 38,Catalogue,2025-06-30,2025-07-06,Digital,2292.99,Complete
+PRM039,Campaign 39,Launch,2025-08-18,2025-08-31,Pharmacy Retail,1931.05,Complete
+PRM040,Campaign 40,Percentage,2025-10-06,2025-10-12,Beauty Retail,2298.35,Complete
+PRM041,Campaign 41,Multibuy,2025-11-24,2025-11-30,Digital,1945.08,Complete
+PRM042,Campaign 42,Catalogue,2026-01-12,2026-01-25,Pharmacy Retail,2042.73,Complete

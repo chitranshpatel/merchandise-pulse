@@ -1,0 +1,13 @@
+supplier_id,supplier_name,supplier_tier,primary_category,standard_lead_time_days,otif_target,active_flag
+SUP001,Northstar Health,Strategic,Skincare,10,0.96,True
+SUP002,Luma Beauty,Strategic,Cosmetics,13,0.96,True
+SUP003,Harbour Labs,Strategic,Vitamins & Supplements,16,0.96,True
+SUP004,Everwell,Strategic,Haircare,7,0.96,True
+SUP005,Juniper Care,Core,Personal Care,10,0.94,True
+SUP006,Kindred Wellness,Core,Wellness,13,0.94,True
+SUP007,Solace Skin,Core,Pharmacy Essentials,16,0.94,True
+SUP008,Brightside,Core,Skincare,7,0.94,True
+SUP009,Field & Form,Core,Cosmetics,10,0.94,True
+SUP010,Common Good,Emerging,Vitamins & Supplements,13,0.94,True
+SUP011,Aster Health,Emerging,Haircare,16,0.94,True
+SUP012,Morrow Beauty,Emerging,Personal Care,7,0.94,True
