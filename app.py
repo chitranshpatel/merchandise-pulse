@@ -310,7 +310,14 @@ if page == "AI Insight Brief":
         audience = st.selectbox("Audience", ["Merchandise leadership", "Supplier manager", "Trade planning team"])
         model = st.selectbox(
             "AI model",
-            ["openai/gpt-4o-mini", "google/gemini-2.5-flash", "anthropic/claude-sonnet-4.5"],
+            [
+                "openai/gpt-4o-mini",
+                "google/gemini-2.5-flash",
+                "anthropic/claude-sonnet-4.5",
+                "deepseek/deepseek-v4-flash-0731",
+                "qwen/qwen3.7-flash",
+                "moonshotai/kimi-k3",
+            ],
             help="Models are accessed through the OpenRouter connection configured by the app owner.",
         )
         generate = st.button(
