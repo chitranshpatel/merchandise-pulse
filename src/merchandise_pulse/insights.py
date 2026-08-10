@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import asdict, dataclass
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -110,6 +111,53 @@ def _schema() -> dict[str, Any]:
     return {"type": "object", "properties": fields, "required": list(fields), "additionalProperties": False}
 
 
+def _request_openrouter(body: dict[str, Any], *, api_key: str, timeout: int) -> dict[str, Any]:
+    request = Request(
+        OPENROUTER_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "http://localhost:8501",
+            "X-Title": "Merchandise Pulse",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        error = RuntimeError(f"OpenRouter returned HTTP {exc.code}: {detail[:300]}")
+        error.status_code = exc.code
+        raise error from exc
+    except (URLError, TimeoutError) as exc:
+        raise RuntimeError(f"OpenRouter request failed: {exc}") from exc
+
+
+def _parse_brief_content(content: str) -> InsightBrief:
+    try:
+        parsed = json.loads(content)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", content, flags=re.DOTALL)
+        if not match:
+            raise RuntimeError("The model did not return a JSON insight brief.")
+        try:
+            parsed = json.loads(match.group(0))
+        except json.JSONDecodeError as exc:
+            raise RuntimeError("The model returned malformed JSON.") from exc
+
+    try:
+        brief = InsightBrief(**parsed)
+    except (TypeError, KeyError) as exc:
+        raise RuntimeError("The model returned an incomplete insight brief.") from exc
+    if brief.confidence not in {"High", "Medium", "Low"}:
+        raise RuntimeError("The model returned an invalid confidence level.")
+    if not all([brief.headline, brief.situation, brief.interpretation, brief.recommendation]):
+        raise RuntimeError("The model returned an incomplete insight brief.")
+    return brief
+
+
 def generate_openrouter_brief(
     evidence: list[dict[str, Any]],
     *,
@@ -124,9 +172,10 @@ def generate_openrouter_brief(
         "Use only the evidence supplied. Do not invent causes, targets, events or financial impacts. "
         "Keep facts separate from interpretation. The recommendation must be a practical next step. "
         "Cite the relevant evidence IDs in evidence_ids.\n\n"
+        f"Return one JSON object matching this schema exactly:\n{json.dumps(_schema())}\n\n"
         f"EVIDENCE:\n{json.dumps(evidence, indent=2)}"
     )
-    body = {
+    base_body = {
         "model": model,
         "temperature": 0.2,
         "max_completion_tokens": 550,
@@ -134,38 +183,27 @@ def generate_openrouter_brief(
             {"role": "system", "content": "You are a careful retail merchandise analyst. Return valid JSON only."},
             {"role": "user", "content": prompt},
         ],
+    }
+    structured_body = {
+        **base_body,
         "response_format": {
             "type": "json_schema",
             "json_schema": {"name": "merchandise_insight_brief", "strict": True, "schema": _schema()},
         },
         "provider": {"require_parameters": True},
     }
-    request = Request(
-        OPENROUTER_URL,
-        data=json.dumps(body).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "http://localhost:8501",
-            "X-Title": "Merchandise Pulse",
-        },
-        method="POST",
-    )
     try:
-        with urlopen(request, timeout=timeout) as response:
-            result = json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"OpenRouter returned HTTP {exc.code}: {detail[:300]}") from exc
-    except (URLError, TimeoutError) as exc:
-        raise RuntimeError(f"OpenRouter request failed: {exc}") from exc
+        result = _request_openrouter(structured_body, api_key=api_key, timeout=timeout)
+    except RuntimeError as exc:
+        if getattr(exc, "status_code", None) not in {400, 404}:
+            raise
+        result = _request_openrouter(base_body, api_key=api_key, timeout=timeout)
 
     try:
         content = result["choices"][0]["message"]["content"]
-        parsed = json.loads(content)
-        brief = InsightBrief(**parsed)
-    except (KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+    except (KeyError, IndexError, TypeError) as exc:
         raise RuntimeError("OpenRouter returned an unexpected response.") from exc
+    brief = _parse_brief_content(content)
 
     if not brief.evidence_ids or not set(brief.evidence_ids).issubset(allowed_ids):
         raise RuntimeError("The generated brief cited evidence that was not supplied.")

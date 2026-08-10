@@ -12,7 +12,7 @@ from merchandise_pulse.metrics.supplier import purchase_order_lines, supplier_se
 from merchandise_pulse.scoring import component_score, performance_band, supplier_score
 from merchandise_pulse.validation import audit_tables, data_quality_score
 from merchandise_pulse.exceptions import campaign_actions, combine_actions, supplier_actions
-from merchandise_pulse.insights import build_evidence, brief_as_markdown, template_brief
+from merchandise_pulse.insights import _parse_brief_content, build_evidence, brief_as_markdown, template_brief
 
 
 def test_commercial_summary_uses_ratio_of_totals():
@@ -216,3 +216,13 @@ def test_missing_deployment_data_is_generated_automatically(tmp_path):
     tables = load_tables(tmp_path / "generated")
     assert set(tables) == set(TABLES)
     assert all(not frame.empty for frame in tables.values())
+
+
+def test_compatibility_response_can_extract_a_fenced_json_brief():
+    content = '''Here is the requested brief:
+```json
+{"headline":"Review supply","situation":"OTIF is below plan.","interpretation":"Service needs review.","recommendation":"Check late lines.","confidence":"Medium","evidence_ids":["E8"]}
+```'''
+    brief = _parse_brief_content(content)
+    assert brief.headline == "Review supply"
+    assert brief.evidence_ids == ["E8"]
