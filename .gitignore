@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+.streamlit/secrets.toml
+*.py[cod]
+
+# Generated datasets and exports
+data/generated/
+data/processed/
+exports/
+
+# Local research and scratch work
+work/
